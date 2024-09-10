@@ -23,80 +23,111 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
+    <style>
+      /* Genel Stiller */
+      .site-blocks-cover.custom-bg {
+        background-image: url(images/bahtiyartır.jpg);
+        background-size: cover;
+        /* Arka planı kapsayıcıya uydurur */
+        background-position: center;
+        /* Görüntüyü merkeze hizalar */
+        background-repeat: no-repeat;
+        /* Görüntüyü tekrar etmez */
+        height: 100vh;
+        /* Ekran yüksekliğini kapla */
+        width: 100%;
+        /* Tam genişlik */
+        display: flex;
+        /* İçeriği ortalamak için flexbox kullanılır */
+        align-items: center;
+        /* İçeriği dikeyde ortala */
+        justify-content: center;
+        /* İçeriği yatayda ortala */
+      }
+
+      /* Mobil cihazlar için medya sorgusu */
+      @media (max-width: 768px) {
+        .site-blocks-cover.custom-bg {
+          height: 60vh;
+          /* Yüksekliği %60 olarak ayarla */
+          background-size: cover;
+          /* Görüntüyü kapsayıcıya göre ayarla */
+          background-position: center;
+          /* Ortala */
+          padding-top: 20px;
+          /* Üstten boşluk bırak */
+        }
+
+        .site-blocks-cover .container {
+          padding: 0 15px;
+          /* Yanlardan boşluk bırak */
+        }
+      }
+    </style>
+
   </head>
-  <body>
-  
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+    <body>
+      <div class="site-wrap">
+        <!-- Mobile Menu -->
+        <div class="site-mobile-menu">
+          <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+              <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+          </div>
+          <div class="site-mobile-menu-body"></div>
         </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
     
-    <header class="site-navbar py-3" role="banner">
-
-      <div class="container">
-        <div class="row align-items-center">
-          
-          <div class="col-11 col-xl-2">
-            <img src="images/bahtiyar.png" alt="Logo" style="max-width: 200px;"> <!-- Margin kaldırıldı -->
-          </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="index.html">Anasayfa</a></li>
-                <li><a href="about.html">Hakkımızda</a></li>
-                <li class="has-children">
-                  <a href="services.html">Hizmetlerimiz</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Air Freight</a></li>
-                    <li><a href="#">Ocean Freight</a></li>
-                    <li><a href="#">Ground Shipping</a></li>
-                    <li><a href="#">Warehousing</a></li>
-                    <li><a href="#">Storage</a></li>
+        <!-- Header -->
+        <header class="site-navbar py-3" role="banner">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-11 col-xl-2">
+                <img src="images/bahtiyar.png" alt="Logo" style="max-width: 200px;"> <!-- Logo -->
+              </div>
+              <div class="col-12 col-md-10 d-none d-xl-block">
+                <nav class="site-navigation position-relative text-right" role="navigation">
+                  <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                    <li class="active"><a href="index.html">Anasayfa</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li class="has-children">
+                      <a href="services.html">Hizmetlerimiz</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Air Freight</a></li>
+                        <li><a href="#">Ocean Freight</a></li>
+                        <li><a href="#">Ground Shipping</a></li>
+                        <li><a href="#">Warehousing</a></li>
+                        <li><a href="#">Storage</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
-                </li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
+                </nav>
+              </div>
+    
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+                <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
+              </div>
+            </div>
           </div>
-
-
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
-          </div>
-
-        </div>
-      </div>
-      
-    </header>
+        </header>
 
   
-
-    <div class="site-blocks-cover overlay" style="background-image: url(images/bahtiyartır.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay custom-bg" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
-
-          <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-            
-
-            <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Profesyonel Kara Yolu Taşımacılığı</h1>
+          <div class="col-12 col-md-8" data-aos="fade-up" data-aos-delay="400">
+            <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Profesyonel Kara Yolu Taşımacılığı
+            </h1>
             <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
-
           </div>
         </div>
       </div>
-    </div>  
+    </div>
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="row align-items-center no-gutters align-items-stretch overlap-section">
         <div class="col-md-4">
           <div class="feature-1 pricing h-100 text-center ">
@@ -130,7 +161,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="site-section">
       <div class="container">
@@ -143,20 +174,22 @@
         <div class="row align-items-stretch">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-travel"></span></div>
+              <div class="unit-4-icon mr-4 mt-4"><span class="text-primary icon-star"></span></div>
               <div>
-                <h3>Air Freight</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <h3>Profesyonel Hizmet</h3>
+                <p>İşinde tecrübe kazanmış ekip arkadaşlarımız ile sizlere en profesyonel ve güvenli taşıma hizmetini sunmaktan mutluluk
+                duyuyoruz.</p>
                 <p class="mb-0"><a href="#">Learn More</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sea-ship-with-containers"></span></div>
+              <div class="unit-4-icon mr-4 mt-4"><span class="text-primary icon-shield"></span></div>
               <div>
-                <h3>Ocean Freight</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <h3>Güvenli Teslimat</h3>
+                <p>Uzman yükleme ekibimiz ve şoförlerimiz ile yükünüzü güvenli bir şekilde yükleyip, size en hızlı ve sağlam şekilde
+                ulaştırıyoruz.</p>
                 <p class="mb-0"><a href="#">Learn More</a></p>
               </div>
             </div>
@@ -165,8 +198,9 @@
             <div class="unit-4 d-flex">
               <div class="unit-4-icon mr-4"><span class="text-primary flaticon-frontal-truck"></span></div>
               <div>
-                <h3>Ground Shipping</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <h3>24/7 Hizmet</h3>
+                <p>Ofislerimizdeki müşteri temsilcilerimize istediğiniz zaman Whatsapp üzerinden ulaşabilir ve sorularınıza cevap
+                bulabilirsiniz.</p>
                 <p class="mb-0"><a href="#">Learn More</a></p>
               </div>
             </div>
@@ -186,13 +220,13 @@
           <a href="#" class="unit-1 text-center">
             <img src="images/img_1.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
-              <h3 class="unit-1-heading">Storage</h3>
+              <h3 class="unit-1-heading">Yükleme</h3>
               <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
             </div>
           </a>
         </div>
 
-        <div>
+        <!-- <div>
           <a href="#" class="unit-1 text-center">
             <img src="images/img_2.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
@@ -200,13 +234,13 @@
               <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
             </div>
           </a>
-        </div>
+        </div> -->
 
         <div>
           <a href="#" class="unit-1 text-center">
             <img src="images/img_3.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
-              <h3 class="unit-1-heading">Cargo Transports</h3>
+              <h3 class="unit-1-heading">Kargo Taşımacılığı</h3>
               <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
             </div>
           </a>
@@ -226,7 +260,7 @@
           <a href="#" class="unit-1 text-center">
             <img src="images/img_5.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
-              <h3 class="unit-1-heading">Ware Housing</h3>
+              <h3 class="unit-1-heading">Depolama</h3>
               <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
             </div>
           </a>
@@ -252,7 +286,7 @@
             <div class="unit-4 d-flex">
               <div class="unit-4-icon mr-4"><span class="text-primary flaticon-travel"></span></div>
               <div>
-                <h3>Air Air Freight</h3>
+                <h3>Air Freight</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
                 <p><a href="#">Learn More</a></p>
               </div>
@@ -441,55 +475,40 @@
       <div class="col-md-9">
         <div class="row">
           <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Quick Links</h2>
+            <h2 class="footer-heading mb-4">Sayfalar</h2>
             <ul class="list-unstyled">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Hakkımızda</a></li>
+              <li><a href="#">Servislerimiz</a></li>
+              <li><a href="#">Görüşler</a></li>
+              <li><a href="#">Bize Ulaşın</a></li>
             </ul>
           </div>
           <div class="col-md-3">
             <h2 class="footer-heading mb-4">Products</h2>
             <ul class="list-unstyled">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Hakkımızda</a></li>
+              <li><a href="#">Servislerimiz</a></li>
+              <li><a href="#">Görüşler</a></li>
+              <li><a href="#">Bize Ulaşın</a></li>
             </ul>
           </div>
           <div class="col-md-3">
             <h2 class="footer-heading mb-4">Features</h2>
             <ul class="list-unstyled">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Hakkımızda</a></li>
+              <li><a href="#">Servislerimiz</a></li>
+              <li><a href="#">Görüşler</a></li>
+              <li><a href="#">Bize Ulaşın</a></li>
             </ul>
           </div>
           <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Follow Us</h2>
+            <h2 class="footer-heading mb-4">Bizi Takip Edin</h2>
             <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
             <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
             <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
             <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-        <form action="#" method="post">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email"
-              aria-label="Enter Email" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-            </div>
-          </div>
-        </form>
       </div>
     </div>
 
