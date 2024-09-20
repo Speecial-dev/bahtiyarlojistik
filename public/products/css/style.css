@@ -1,0 +1,343 @@
+/* css/style.css */
+
+/* Genel Stil Ayarları */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Kategori Listesi */
+#category-list .list-group-item {
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+#category-list .list-group-item a {
+    display: block;
+    width: 100%;
+    color: #333;
+    font-weight: bold;
+}
+
+#category-list .list-group-item a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+#category-list .list-group-flush .list-group-item {
+    padding-left: 2rem;
+    font-weight: normal;
+}
+
+#category-list .list-group-flush .list-group-item a {
+    color: #555;
+}
+
+#category-list .list-group-flush .list-group-item a:hover {
+    color: #e74c3c;
+}
+
+/* Ürün Kartları */
+.product-card {
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #cf2a1c;
+}
+
+.btn-custom {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.btn-custom:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Ürün Detay Sayfası */
+.product-gallery {
+    position: relative;
+}
+
+.product-gallery #mainImage {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumb-images {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumb-images img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.thumb-images img:hover {
+    border-color: #333;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.product-price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.product-price .discount {
+    color: #27ae60;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.product-description {
+    margin-top: 30px;
+}
+
+.color-options {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.color-options .color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.color-options .color-option:hover {
+    border-color: #333;
+}
+
+.nav-tabs .nav-link {
+    color: #333;
+}
+
+.nav-tabs .nav-link.active {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.review:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .product-image {
+        height: 200px;
+    }
+
+    .thumb-images {
+        overflow-x: auto;
+    }
+
+    .thumb-images img {
+        margin-right: 5px;
+    }
+
+    .product-gallery #mainImage {
+        height: auto;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+}
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.site-navbar .col-xl-2 {
+    display: flex;
+    justify-content: flex-start; /* Logoyu sola hizala */
+}
+
+.site-navbar .col-md-10 {
+    display: flex;
+    justify-content: flex-end; /* Menü öğelerini sağa hizala */
+}
+
+.site-navigation {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 0; /* Menü öğeleri tamamen sağda dursun */
+}
+
+.site-menu {
+    display: inline-flex; /* Menü öğelerini yatayda hizala */
+    justify-content: flex-end; /* Menü öğelerini sağa yasla */
+}
+
+.site-menu li {
+    margin-left: 20px; /* Menü öğeleri arasına boşluk ekle */
+}
+/* Navbar genel görünümü */
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fff; /* Arka plan rengi */
+    padding: 15px 0; /* Üst ve alt boşluklar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+}
+
+/* Logo ve menü hizalaması */
+.site-navbar .col-xl-2 {
+    display: flex;
+    justify-content: flex-start; /* Logoyu sola hizala */
+}
+
+.site-navbar .col-md-10 {
+    display: flex;
+    justify-content: flex-end; /* Menü öğelerini sağa hizala */
+}
+
+/* Masaüstü için menü öğeleri */
+.site-menu {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.site-menu li {
+    margin-left: 20px; /* Menü öğeleri arasında boşluk */
+}
+
+/* Hamburger Menü Simgesi (Mobil) */
+.site-menu-toggle {
+    display: none; /* Masaüstü için gizli */
+}
+
+/* Hamburger Menü (Mobil) */
+/* Hamburger Menu for Mobile */
+@media (max-width: 991.98px) {
+    .site-menu-toggle {
+        display: block !important; /* Make sure it's visible */
+    }
+
+    .site-menu {
+        display: none !important; /* Hide the desktop menu */
+    }
+
+    .mobile-menu {
+        display: none;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+}

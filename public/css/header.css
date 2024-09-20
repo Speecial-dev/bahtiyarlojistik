@@ -1,0 +1,85 @@
+/* Genel Stil Ayarları */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Menü stilleri */
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.site-navbar .col-xl-2 {
+    display: flex;
+    justify-content: flex-start; /* Logoyu sola hizala */
+}
+
+.site-navbar .col-md-10 {
+    display: flex;
+    justify-content: flex-end; /* Menü öğelerini sağa hizala */
+}
+
+.site-menu {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.site-menu li {
+    margin-left: 20px;
+}
+
+/* Mobil Menü */
+.site-menu-toggle {
+    display: none;
+}
+
+/* Hamburger Menü Simge */
+@media (max-width: 991.98px) {
+    .site-menu-toggle {
+        display: block; /* Mobilde hamburger menü simgesini göster */
+    }
+
+    .site-menu {
+        display: none; /* Masaüstü menüsünü gizle */
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+        padding: 20px;
+        display: none; /* Başlangıçta gizle */
+    }
+
+    .mobile-site-menu {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .mobile-site-menu li {
+        margin-bottom: 10px;
+    }
+
+    .mobile-site-menu a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+    }
+}
+
+/* Hover efektleri ve geçişler */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #cf2a1c;
+}

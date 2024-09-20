@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ürünler</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Özel CSS -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="../images/bahtiyar.svg" alt="Logo" style="max-height: 50px;">
+            </a>
+            <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Air Freight</a></li>
+                            <li><a class="dropdown-item" href="#">Ocean Freight</a></li>
+                            <li><a class="dropdown-item" href="#">Ground Shipping</a></li>
+                            <li><a class="dropdown-item" href="#">Warehousing</a></li>
+                            <li><a class="dropdown-item" href="#">Storage</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="industries.html">Industries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ürün Listesi Bölümü -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Kategori Listesi (Sol Sidebar) -->
+            <div class="col-md-3">
+                <h4>Kategoriler</h4>
+                <ul class="list-group" id="category-list">
+                    <!-- Kategoriler JavaScript ile yüklenecek -->
+                </ul>
+            </div>
+            <!-- Ürün Listesi (Ana İçerik) -->
+            <div class="col-md-9">
+                <div class="text-center">
+                    <h1 class="mb-3" id="category-name">Ürünler</h1>
+                    <p class="mb-5">Seçtiğiniz kategorideki ürünleri keşfedin.</p>
+                </div>
+
+                <!-- Ürün Listesi -->
+                <div class="row g-4" id="product-list">
+                    <!-- Ürünler JavaScript ile yüklenecek -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Dosyaları -->
+    <!-- categories.js ve products.js dosyalarını dahil ediyoruz -->
+    <script src="js/categories.js"></script>
+    <script src="js/products.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Ürünleri ve Kategorileri Yükleyen JavaScript -->
+    <script>
+        // URL'den kategori ve alt kategori ID'sini alın
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryId = urlParams.get('category');
+        const subcategoryId = urlParams.get('subcategory');
+
+        // Kategori bilgilerini alın
+        const category = categories[categoryId];
+
+        if (category) {
+            // Sayfa başlığını güncelleyin
+            document.getElementById('category-name').textContent = category.name;
+
+            // Ürün listesini oluşturun
+            const productList = document.getElementById('product-list');
+
+            products.forEach(product => {
+                // Ürünün kategori ve alt kategori bilgileri
+                if (product.category === categoryId) {
+                    // Eğer alt kategori seçilmişse
+                    if (subcategoryId) {
+                        if (product.subcategory === subcategoryId) {
+                            // Ürünü göster
+                            addProductCard(product, productList);
+                        }
+                    } else {
+                        // Alt kategori seçilmemişse, kategorideki tüm ürünleri göster
+                        addProductCard(product, productList);
+                    }
+                }
+            });
+        } else {
+            // Kategori bulunamadıysa mesaj gösterin
+            document.querySelector('.container').innerHTML = '<p>Kategori bulunamadı.</p>';
+        }
+
+        // Ürün kartını oluşturma fonksiyonu
+        function addProductCard(product, productList) {
+            const productCard = `
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <a href="product-detail.html?id=${product.id}">
+                            <img src="${product.images[0]}" class="card-img-top product-image" alt="${product.name}">
+                        </a>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="price">${product.price} TL</p>
+                            <a href="product-detail.html?id=${product.id}" class="btn btn-custom mt-3">Detayları Gör</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            productList.innerHTML += productCard;
+        }
+
+        // Kategori listesini oluşturun
+        const categoryList = document.getElementById('category-list');
+
+        for (let catId in categories) {
+            const category = categories[catId];
+
+            // Ana kategori öğesi
+            const categoryItem = document.createElement('li');
+            categoryItem.className = 'list-group-item';
+
+            // Kategori adı
+            const categoryLink = document.createElement('a');
+            categoryLink.href = `product-list.html?category=${catId}`;
+            categoryLink.textContent = category.name;
+            categoryLink.style.fontWeight = 'bold';
+
+            categoryItem.appendChild(categoryLink);
+
+            // Alt kategoriler varsa, onları listele
+            if (category.subcategories && Object.keys(category.subcategories).length > 0) {
+                const subcategoryList = document.createElement('ul');
+                subcategoryList.className = 'list-group list-group-flush';
+
+                for (let subcatId in category.subcategories) {
+                    const subcategory = category.subcategories[subcatId];
+
+                    const subcategoryItem = document.createElement('li');
+                    subcategoryItem.className = 'list-group-item';
+
+                    const subcategoryLink = document.createElement('a');
+                    subcategoryLink.href = `products.html?category=${catId}&subcategory=${subcatId}`;
+                    subcategoryLink.textContent = subcategory.name;
+
+                    subcategoryItem.appendChild(subcategoryLink);
+                    subcategoryList.appendChild(subcategoryItem);
+                }
+
+                categoryItem.appendChild(subcategoryList);
+            }
+
+            categoryList.appendChild(categoryItem);
+        }
+    </script>
+
+</body>
+
+</html>
