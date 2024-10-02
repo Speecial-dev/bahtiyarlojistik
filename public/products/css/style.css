@@ -69,8 +69,10 @@ a:hover {
 
 /* Ürün Kartları */
 .product-card {
-    border: none;
-    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Kart içeriğinin eşit aralıklarla dağılmasını sağlar */
 }
 
 .product-card:hover {
@@ -79,9 +81,11 @@ a:hover {
 }
 
 .product-image {
-    height: 250px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    max-height: 300px;
 }
 
 .card-title {
@@ -89,7 +93,9 @@ a:hover {
     font-weight: bold;
     color: #333;
 }
-
+.card-body {
+    flex-grow: 1; /* Kart gövdesinin kartın yüksekliğini doldurmasına izin verir */
+}
 .card-text {
     color: #777;
     font-size: 0.9rem;
@@ -130,8 +136,11 @@ a:hover {
 }
 
 .product-gallery #mainImage {
-    width: 100%;
-    border-radius: 10px;
+    max-width: 100%; /* Genişliğin kapsayıcı alanın boyutunu geçmesini engeller */
+    max-height: 500px; /* Resmin yüksekliğini sabit bir boyutta tutar */
+    object-fit: contain; /* Resmin tamamını alan içinde orantılı şekilde tutar */
+    margin: 0 auto; /* Ortaya hizalar */
+    display: block; /* Ortaya hizalamayı düzgün yapar */
 }
 
 .thumb-images {
@@ -141,17 +150,19 @@ a:hover {
 }
 
 .thumb-images img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    width: 70px; /* Küçük resimlerin genişliğini belirleyin */
+    height: 70px; /* Küçük resimlerin yüksekliğini belirleyin */
+    margin-right: 10px; /* Küçük resimler arasındaki boşluk */
+    cursor: pointer; /* Fare imlecinin küçük resimlerin üzerine gelince değişmesini sağlar */
+    object-fit: cover; /* Resmi küçük boyutlarda daha düzgün gösterir */
+    border: 2px solid #ddd; /* Küçük resimlere bir kenarlık ekler */
+    transition: transform 0.3s ease; /* Hover efekti için geçiş ekler */
 }
 
 .thumb-images img:hover {
     border-color: #333;
+    transform: scale(1.1); /* Üzerine gelindiğinde resmi biraz büyütür */
+
 }
 
 .product-price {

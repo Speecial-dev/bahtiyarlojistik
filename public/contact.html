@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Logistics &mdash; Colorlib Website Template</title>
+        <title>Bolu Lojistik İletişim | Bahtiyar Lojistik ile İletişime Geçin </title>
+        <meta name="description"
+          content="Bolu'da taşımacılık ve lojistik hizmetleri hakkında bilgi almak veya fiyat teklifi almak için hemen bizimle iletişime geçin.">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -38,46 +42,43 @@
       <div class="site-mobile-menu-body"></div>
     </div>
     
-    <header class="site-navbar py-3" role="banner">
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <div class="row align-items-center">
-          
-          <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1>
-          </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="has-children">
-                  <a href="services.html">Services</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Air Freight</a></li>
-                    <li><a href="#">Ocean Freight</a></li>
-                    <li><a href="#">Ground Shipping</a></li>
-                    <li><a href="#">Warehousing</a></li>
-                    <li><a href="#">Storage</a></li>
-                  </ul>
-                </li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="active"><a href="contact.html">Contact</a></li>
+        <a class="navbar-brand" href="index.html">
+          <img src="images/bahtiyar.svg" alt="Logo" style="height: 80px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item"></li>
+            <a class="nav-link" href="about.html">Hakkımızda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Hizmetlerimiz
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="industries.html">Kara Yolu Taşımacılığı</a></li>
+                <li><a class="dropdown-item" href="/products/">İş Kıyafetleri</a></li>
               </ul>
-            </nav>
-          </div>
-
-
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
-
-          </div>
-
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="industries.html">Sektör</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">İletişim</a>
+            </li>
+          </ul>
         </div>
       </div>
-      
-    </header>
+    </nav>
 
   
 
@@ -98,75 +99,35 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7 mb-5">
-
-            
-
-            <form action="#" class="p-5 bg-white">
-             
-
-              <div class="row form-group">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">First Name</label>
-                  <input type="text" id="fname" class="form-control">
-                </div>
-                <div class="col-md-6">
-                  <label class="text-black" for="lname">Last Name</label>
-                  <input type="text" id="lname" class="form-control">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Subject</label> 
-                  <input type="subject" id="subject" class="form-control">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
-                </div>
-              </div>
-
-  
-            </form>
+            <!-- Google Maps Embed Başlangıcı -->
+            <div class="google-map-container" style="width: 100%; height: 400px; margin-top: 20px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d666.8413012005701!2d31.62347906416375!3d40.74048799668134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d3f58e201dd1f%3A0x38c49d51e1fc89c7!2sBahtiyar%20Lojistik!5e0!3m2!1str!2str!4v1727616889651!5m2!1str!2str"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- Google Maps Embed Sonu -->
           </div>
           <div class="col-md-5">
-            
             <div class="p-4 mb-3 bg-white">
-              <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <p class="mb-0 font-weight-bold">Adres</p>
+              <p class="mb-4">Aşağısoku Mah. Yıldırım Beyazıt Cd. Işık Konutları B Blok No:18/1 Merkez/BOLU</p>
 
-              <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+              <p class="mb-0 font-weight-bold">Telefon</p>
+              <p class="mb-4"><a href="https://wa.me/905527841400" target="_blank">+90 552 784 14 00</a></p>
 
-              <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
-
+              <p class="mb-4"><a href="#">+90 552 784 14 00</a></p>
+              <p class="mb-0 font-weight-bold">Email Adres</p>
+              <p class="mb-0"><a href="#">info@bahtiyarlojistik.com</a></p>
             </div>
-            
-            <div class="p-4 mb-3 bg-white">
+
+            <!-- <div class="p-4 mb-3 bg-white">
               <h3 class="h5 text-black mb-3">More Info</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic
+                consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed
+                nulla.</p>
               <p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
-            </div>
-
+            </div> -->
           </div>
         </div>
       </div>
@@ -252,6 +213,7 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="js/main.js"></script>
     

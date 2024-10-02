@@ -560,11 +560,11 @@ h1, h2, h3, h4, h5,
     bottom: -250px;
     width: 100%; }
   .site-blocks-cover, .site-blocks-cover .row {
-    min-height: 600px;
-    height: calc(100vh); }
+    min-height: 650px;
+    height: calc(120vh); }
   .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover .row {
     min-height: 600px;
-    height: calc(30vh); }
+    height: calc(100vh); }
   .site-blocks-cover h1 {
     font-size: 4rem;
     font-weight: 900;
@@ -1384,3 +1384,77 @@ h1, h2, h3, h4, h5,
 .custom-pagination span {
   background: #e6e6e6;
   color: #000; }
+
+  // yeni bir header
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* Navbar */
+.navbar {
+    background-color: #ffffff !important;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge ekledik */
+    font-family: 'Poppins', sans-serif; 
+}
+
+.nav-link {
+    color: #333333 !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+    text-decoration: underline;
+}
+
+/* Dropdown Menü */
+.dropdown-menu {
+    background-color: #ffffff !important;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dropdown'a da gölge ekledik */
+}
+
+.dropdown-item {
+    font-size: 1rem;
+    color: #333333;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+/* Navbar Brand Logo */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000 !important;
+    text-transform: uppercase;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+    
+}
+/* Topbar düzenlemeleri */
+.topbar {
+  background-color: #28a745; /* Arka plan rengi */
+  color: #fff; /* Yazı rengi */
+  padding: 20px;
+  text-align: center;
+}
+
+.topbar .btn {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .topbar .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

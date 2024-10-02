@@ -95,10 +95,9 @@
 
     <!-- Ürünleri ve Kategorileri Yükleyen JavaScript -->
     <script>
-        // URL'den kategori ve alt kategori ID'sini alın
+        // URL'den kategori ID'sini alın
         const urlParams = new URLSearchParams(window.location.search);
         const categoryId = urlParams.get('category');
-        const subcategoryId = urlParams.get('subcategory');
 
         // Kategori bilgilerini alın
         const category = categories[categoryId];
@@ -111,18 +110,10 @@
             const productList = document.getElementById('product-list');
 
             products.forEach(product => {
-                // Ürünün kategori ve alt kategori bilgileri
+                // Ürünün kategori bilgileri
                 if (product.category === categoryId) {
-                    // Eğer alt kategori seçilmişse
-                    if (subcategoryId) {
-                        if (product.subcategory === subcategoryId) {
-                            // Ürünü göster
-                            addProductCard(product, productList);
-                        }
-                    } else {
-                        // Alt kategori seçilmemişse, kategorideki tüm ürünleri göster
-                        addProductCard(product, productList);
-                    }
+                    // Ürünü göster
+                    addProductCard(product, productList);
                 }
             });
         } else {
@@ -167,7 +158,7 @@
 
             categoryItem.appendChild(categoryLink);
 
-            // Alt kategoriler varsa, onları listele
+            // Alt kategoriler varsa, onları listele (Şu anda alt kategori kısmı yok, istersen ekleyebilirsin)
             if (category.subcategories && Object.keys(category.subcategories).length > 0) {
                 const subcategoryList = document.createElement('ul');
                 subcategoryList.className = 'list-group list-group-flush';
@@ -191,6 +182,7 @@
 
             categoryList.appendChild(categoryItem);
         }
+
     </script>
 
 </body>

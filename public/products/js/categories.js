@@ -5,9 +5,9 @@ var categories = {
         "name": "T-shirt",
         "image": "images/categories/tshirtCategories.jpg"
     },
-    "genc-giyim": {
+    "SweatShirt": {
         "name": "Sweatshirt",
-        "image": "images/categories/ts.jpg"
+        "image": "images/categories/sweatshirtCategories.jpg"
     }
     // Daha fazla kategori ekleyebilirsiniz
 };
