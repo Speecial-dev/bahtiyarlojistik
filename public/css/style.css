@@ -546,15 +546,37 @@ h1, h2, h3, h4, h5,
   background-position: top;
   background-position: center center; }
   .site-blocks-cover.overlay {
-    position: relative; }
+  position: relative;
+  height: 100%;
+  width: 100%; /* Genişliği %100 yaparak tam ekranı kaplamasını sağlarız */
+  max-width: 100%; /* Taşmayı engellemek için genişliği sınırlandırırız */
+  display: flex;
+  align-items: center; /* Dikey hizalama */
+  justify-content: center; /* Yatay hizalama */
+  padding: 0 15px; /* Kenarlardan hafif boşluk vererek ekran taşmalarını önlüyoruz */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+
+  @media (max-width: 768px) {
+    .site-blocks-cover h1 {
+      font-size: 2rem; /* Daha küçük ekranlar için yazı boyutu küçültüldü */
+    }
+
+    .site-blocks-cover .btn {
+      padding: 12px 24px;
+      font-size: 1rem; /* Buton boyutları küçültüldü */
+    }
+  }
     .site-blocks-cover.overlay:before {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: 0;
-      right: 0;
-      top: 0;
-      background: rgba(0, 0, 0, 0.4); }
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Görselin daha koyu görünmesini sağlayarak yazıların öne çıkmasını sağlarız */
+    z-index: 1 }
   .site-blocks-cover .player {
     position: absolute;
     bottom: -250px;
@@ -565,10 +587,10 @@ h1, h2, h3, h4, h5,
   .site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover .row {
     min-height: 600px;
     height: calc(100vh); }
-  .site-blocks-cover h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    color: #fff; }
+  .site-blocks-cover h1, .site-blocks-cover p {
+    z-index: 2; /* Metnin görselin üstünde görünmesini sağlamak için */
+  text-align: center; /* Metnin merkezde hizalanmasını sağla */
+  width: 100%; }
     @media (max-width: 991.98px) {
       .site-blocks-cover h1 {
         font-size: 2rem; } }
@@ -577,7 +599,9 @@ h1, h2, h3, h4, h5,
     font-size: 1.2rem;
     line-height: 1.5; }
   .site-blocks-cover .btn {
-    border: 2px solid transparent; }
+    border: 2px solid transparent;
+  padding: 10px 20px;
+    font-size: 1rem; }
     .site-blocks-cover .btn:hover {
       color: #fff !important;
       background: none;
@@ -1457,4 +1481,46 @@ body {
     flex-direction: column;
     align-items: center;
   }
+}
+/* Yeni .carousel-item stili - YOK, eklemeniz gerekiyor */
+.carousel-item {
+  height: 100vh; /* Tam ekran yüksekliği */
+  min-height: 500px; /* Küçük ekranlarda minimum yükseklik */
+  width: 100%; /* Genişliği ekranın tamamını kaplayacak şekilde ayarlandı */
+  overflow: hidden; /* Taşmayı engeller */
+}
+.carousel-inner {
+  width: 100%; /* Carousel genişliğini %100 yap */
+  max-width: 100%; /* Ekranı aşmasını engelle */
+  overflow: hidden; /* Taşmayı engeller */
+}
+@media (max-width: 768px) {
+  /* Mobil Ekran Güncellemeleri */
+  .carousel-item {
+    height: 70vh; /* Mobil cihazlarda yükseklik azaltıldı */
+  }
+
+  .site-blocks-cover h1 {
+    font-size: 1.8rem; /* Daha küçük ekranlar için yazı boyutu küçültüldü */
+  }
+
+  .site-blocks-cover .btn {
+    padding: 10px 20px;
+    font-size: 1rem; /* Buton boyutları küçültüldü */
+  }
+}
+.container {
+  width: 100%; /* Genişlik %100 olacak */
+   /* Ekranı aşmasın */
+  padding-left: 15px; /* İçeriklerin yanlara yapışmasını engellemek için */
+  padding-right: 15px; /* İçeriklerin yanlara yapışmasını engellemek için */
+  margin: 0 auto; /* Ortalamak için *//* Kenarlardan hafif iç boşluk */
+}
+.carousel-inner img {
+  object-fit: cover; /* Resmin tam oturmasını sağlar */
+  width: 100%;
+  height: 100%;
+}
+.navbar-nav .nav-link {
+  padding-left: 15px; /* Soldan boşluk ekleyerek görünümü dengeleme */
 }
