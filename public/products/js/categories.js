@@ -8,6 +8,15 @@ var categories = {
     "SweatShirt": {
         "name": "Sweatshirt",
         "image": "images/categories/sweatshirtCategories.jpg"
-    }
+    },
+    "Polar": {
+        "name": "Polar",
+        "image": "images/categories/polar.jpg"
+    },
+    // "Ceket": {
+    //     "name": "Ceket",
+    //     "image": "images/categories/sweatshirtCategories.jpg"
+    // }
+
     // Daha fazla kategori ekleyebilirsiniz
 };
