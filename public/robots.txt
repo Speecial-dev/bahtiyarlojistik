@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: 
+Sitemap: https://bahtiyarlojistik.com/sitemap.xml
