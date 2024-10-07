@@ -13,10 +13,14 @@ var categories = {
         "name": "Polar",
         "image": "images/categories/polar.jpg"
     },
-    // "Ceket": {
-    //     "name": "Ceket",
-    //     "image": "images/categories/sweatshirtCategories.jpg"
-    // }
+    "Kaban": {
+        "name": "Kaban",
+        "image": "images/categories/sweatshirtCategories.jpg"
+    },
+    "İş Ceket": {
+        "name": "İş Ceket",
+        "image": "images/categories/sweatshirtCategories.jpg"
+    }
 
     // Daha fazla kategori ekleyebilirsiniz
 };
