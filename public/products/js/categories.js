@@ -15,11 +15,11 @@ var categories = {
     },
     "Kaban": {
         "name": "Kaban",
-        "image": "images/categories/sweatshirtCategories.jpg"
+        "image": "images/categories/kaban.png"
     },
     "İş Ceket": {
         "name": "İş Ceket",
-        "image": "images/categories/sweatshirtCategories.jpg"
+        "image": "images/categories/ceket.jpg"
     }
 
     // Daha fazla kategori ekleyebilirsiniz
