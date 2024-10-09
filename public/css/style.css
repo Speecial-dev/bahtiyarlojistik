@@ -524,7 +524,12 @@ h1, h2, h3, h4, h5,
         width: auto; }
         .site-mobile-menu .site-nav-wrap[data-class="social"] > li:first-child a {
           padding-left: 15px !important; }
-
+.product-image {
+    width: 100%;
+    height: 250px; /* Yüksekliği sabitleyebilirsin */
+    object-fit: cover; /* Resmin sığması için */
+    border-radius: 5px; /* Kartların köşeleri ile uyum sağlamak için */
+}
 /* Blocks */
 .site-blocks-cover {
   background-size: cover;

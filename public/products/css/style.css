@@ -192,15 +192,37 @@ a:hover {
 .product-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 10px 10px 0 0;
-    max-height: 300px;
+    max-height: 400px;
 }
 
 .card-title {
     font-size: 1.1rem;
     font-weight: bold;
     color: #333;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Kartın içindeki öğeler arasında eşit boşluk bırakır */
+    height: 100%; /* Tüm kartı kaplayacak şekilde genişler */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Kart gövdesinin tüm boşluğu kaplamasını sağlar */
+    justify-content: flex-end; /* İçeriğin alt kısımda toplanmasını sağlar */
+    text-align: center; /* Yazıları ortalar */
+}
+
+.card-title {
+    margin-bottom: 10px; /* Butonla başlık arasında biraz boşluk bırakır */
+}
+
+.btn-custom {
+    margin-top: auto; /* Butonu kartın en alt kısmına sabitler */
+    align-self: center; /* Yatay olarak ortalar */
 }
 .card-body {
     flex-grow: 1; /* Kart gövdesinin kartın yüksekliğini doldurmasına izin verir */

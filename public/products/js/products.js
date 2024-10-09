@@ -3,7 +3,7 @@ var products = [
         "id": "1",
         "name": "T-shirt",
         "price": "",
-        "images": ["images/products/T-shirts/Polo Yaka T-shirt Model 1/format_webp.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model 1/1_org_zoom.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model 1/maviSpreyTshirt.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model1/siyahTshirt.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model1/maviSpreyTshirt.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model1/kırmızıTshirt.jpg"],
+        "images": ["images/products/T-shirts/Polo Yaka T-shirt Model 1/format_webp.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model 1/maviSpreyTshirt.jpg",  "images/products/T-shirts/Polo Yaka T-shirt Model 1/1_org_zoom.jpg",  "images/products/T-shirts/Polo Yaka T-shirt Model1/siyahTshirt.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model1/maviSpreyTshirt.jpg", "images/products/T-shirts/Polo Yaka T-shirt Model1/kırmızıTshirt.jpg"],
         "description": "Yumuşak kumaşı ve şık tasarımıyla günlük kullanım için mükemmel bir t-shirt.",
         "sizes": ["S", "M", "L", "XL", "XXL"],
         "category": "T-shirt"
