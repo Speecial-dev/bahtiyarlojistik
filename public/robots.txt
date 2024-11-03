@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: 
+Disallow: /index.html
 Sitemap: https://bahtiyarlojistik.com/sitemap.xml
